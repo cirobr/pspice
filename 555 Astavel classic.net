@@ -1,0 +1,12 @@
+* Schematics Netlist *
+
+
+
+X_X1         0 $N_0001 $N_0002 $N_0003 $N_0004 $N_0001 $N_0005 $N_0003 555D
++  PARAMS: MAXFREQ=3E6
+V_V1         $N_0003 0 12V
+C_CX         $N_0004 0  10n  
+R_RL         0 $N_0002  10k  
+C_C1         0 $N_0001  10n  
+R_R1         $N_0005 $N_0003  40k  
+R_R2         $N_0005 $N_0001  25k  

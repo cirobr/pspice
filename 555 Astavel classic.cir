@@ -1,0 +1,23 @@
+* C:\Users\Ciro\Dropbox\PSPICE\Projects\555 Astavel classic.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 24 01:05:27 2013
+
+
+
+** Analysis setup **
+.tran .2ms 5ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "555 Astavel classic.net"
+.INC "555 Astavel classic.als"
+
+
+.probe
+
+
+.END

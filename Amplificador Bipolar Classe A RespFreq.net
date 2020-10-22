@@ -1,0 +1,15 @@
+* Schematics Netlist *
+
+
+
+V_V1         VCC 0 12V
+R_R1         $N_0001 VCC  40K  
+C_C1         $N_0002 $N_0001  2.2uF  
+Q_Q1         $N_0003 $N_0001 $N_0004 Q2N2222
+R_R2         0 $N_0001  5K  
+R_R4         0 $N_0004  50  
+R_R5         0 $N_0005  10k  
+R_R3         $N_0003 VCC  800  
+C_C3         0 $N_0004  22nF  
+V_Vin         $N_0002 0 DC 0V AC 100mV 
+C_C2         $N_0003 $N_0005  2.2uF  

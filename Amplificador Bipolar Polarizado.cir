@@ -1,0 +1,22 @@
+* C:\Users\Ciro\Dropbox\PSPICE\Projects\Amplificador Bipolar Polarizado.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 24 01:13:08 2013
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Amplificador Bipolar Polarizado.net"
+.INC "Amplificador Bipolar Polarizado.als"
+
+
+.probe
+
+
+.END

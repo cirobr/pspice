@@ -1,0 +1,105 @@
+
+**** 11/24/13 01:12:08 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Ciro\Dropbox\PSPICE\Projects\Circuito RC Vac.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 24 01:12:05 2013
+
+
+
+** Analysis setup **
+.ac LIN 1000 10 10k
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Circuito RC Vac.net"
+
+**** INCLUDING "Circuito RC Vac.net" ****
+* Schematics Netlist *
+
+
+
+C_C1         0 $N_0001  10n  
+V_V1         $N_0002 0 DC 0V AC 50mV 
+R_R1         $N_0002 $N_0001  10k  
+
+**** RESUMING "Circuito RC Vac.cir" ****
+.INC "Circuito RC Vac.als"
+
+
+
+**** INCLUDING "Circuito RC Vac.als" ****
+* Schematics Aliases *
+
+.ALIASES
+C_C1            C1(1=0 2=$N_0001 )
+V_V1            V1(+=$N_0002 -=0 )
+R_R1            R1(1=$N_0002 2=$N_0001 )
+.ENDALIASES
+
+
+**** RESUMING "Circuito RC Vac.cir" ****
+.probe
+
+
+.END
+
+**** 11/24/13 01:12:08 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Ciro\Dropbox\PSPICE\Projects\Circuito RC Vac.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 11/24/13 01:12:08 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Ciro\Dropbox\PSPICE\Projects\Circuito RC Vac.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+

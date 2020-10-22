@@ -1,0 +1,192 @@
+
+**** 11/26/13 22:26:05 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Ciro\Dropbox\PSPICE\Projects\Amplificador Bipolar Classe A RespFreq.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 24 01:17:22 2013
+
+
+
+** Analysis setup **
+.ac LIN 10000 20 100k
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Amplificador Bipolar Classe A RespFreq.net"
+
+**** INCLUDING "Amplificador Bipolar Classe A RespFreq.net" ****
+* Schematics Netlist *
+
+
+
+V_V1         VCC 0 12V
+R_R1         $N_0001 VCC  40K  
+C_C1         $N_0002 $N_0001  2.2uF  
+Q_Q1         $N_0003 $N_0001 $N_0004 Q2N2222
+R_R2         0 $N_0001  5K  
+R_R4         0 $N_0004  50  
+R_R5         0 $N_0005  10k  
+R_R3         $N_0003 VCC  800  
+C_C3         0 $N_0004  22nF  
+V_Vin         $N_0002 0 DC 0V AC 100mV 
+C_C2         $N_0003 $N_0005  2.2uF  
+
+**** RESUMING "Amplificador Bipolar Classe A RespFreq.cir" ****
+.INC "Amplificador Bipolar Classe A RespFreq.als"
+
+
+
+**** INCLUDING "Amplificador Bipolar Classe A RespFreq.als" ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=VCC -=0 )
+R_R1            R1(1=$N_0001 2=VCC )
+C_C1            C1(1=$N_0002 2=$N_0001 )
+Q_Q1            Q1(c=$N_0003 b=$N_0001 e=$N_0004 )
+R_R2            R2(1=0 2=$N_0001 )
+R_R4            R4(1=0 2=$N_0004 )
+R_R5            R5(1=0 2=$N_0005 )
+R_R3            R3(1=$N_0003 2=VCC )
+C_C3            C3(1=0 2=$N_0004 )
+V_Vin           Vin(+=$N_0002 -=0 )
+C_C2            C2(1=$N_0003 2=$N_0005 )
+_    _(VCC=VCC)
+.ENDALIASES
+
+
+**** RESUMING "Amplificador Bipolar Classe A RespFreq.cir" ****
+.probe
+
+
+.END
+
+**** 11/26/13 22:26:05 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Ciro\Dropbox\PSPICE\Projects\Amplificador Bipolar Classe A RespFreq.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N2222         
+               NPN             
+          IS   14.340000E-15 
+          BF  255.9          
+          NF    1            
+         VAF   74.03         
+         IKF     .2847       
+         ISE   14.340000E-15 
+          NE    1.307        
+          BR    6.092        
+          NR    1            
+          RB   10            
+          RC    1            
+         CJE   22.010000E-12 
+         MJE     .377        
+         CJC    7.306000E-12 
+         MJC     .3416       
+          TF  411.100000E-12 
+         XTF    3            
+         VTF    1.7          
+         ITF     .6          
+          TR   46.910000E-09 
+         XTB    1.5          
+          CN    2.42         
+           D     .87         
+
+
+**** 11/26/13 22:26:05 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Ciro\Dropbox\PSPICE\Projects\Amplificador Bipolar Classe A RespFreq.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   12.0000  ($N_0001)    1.1266                   ($N_0002)    0.0000    
+
+($N_0003)    5.2246                   ($N_0004)     .4258                       
+
+($N_0005)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -8.741E-03
+    V_Vin        0.000E+00
+
+    TOTAL POWER DISSIPATION   1.05E-01  WATTS
+
+
+**** 11/26/13 22:26:05 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Ciro\Dropbox\PSPICE\Projects\Amplificador Bipolar Classe A RespFreq.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q1      
+MODEL        Q2N2222   
+IB           4.65E-05 
+IC           8.47E-03 
+VBE          7.01E-01 
+VBC         -4.10E+00 
+VCE          4.80E+00 
+BETADC       1.82E+02 
+GM           3.19E-01 
+RPI          5.99E+02 
+RX           1.00E+01 
+RO           9.22E+03 
+CBE          1.69E-10 
+CBC          3.86E-12 
+CJS          0.00E+00 
+BETAAC       1.91E+02 
+CBX/CBX2     0.00E+00 
+FT/FT2       2.93E+08 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .30
+

@@ -1,0 +1,13 @@
+* C:\Documents and Settings\Ciro\Meus documentos\MSimEv_8\Projects\RLC Escada.stl written on Sun Feb 25 11:28:13 2007
+* by Stimulus Editor -- Evaluation Version 8.0
+;!Stimulus Get
+;! V1 Analog
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 3ms
+;!Yrange -100m 100m
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS V1 SIN( 0 100m 1K 0 0 0 )

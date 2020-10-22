@@ -1,0 +1,23 @@
+* C:\Users\Ciro\Dropbox\PSPICE\Projects\Amplificador Bipolar Classe A Vsin.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 24 01:09:32 2013
+
+
+
+** Analysis setup **
+.tran 2e-9 1ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Amplificador Bipolar Classe A Vsin.net"
+.INC "Amplificador Bipolar Classe A Vsin.als"
+
+
+.probe
+
+
+.END

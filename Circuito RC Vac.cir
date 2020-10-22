@@ -1,0 +1,23 @@
+* C:\Users\Ciro\Dropbox\PSPICE\Projects\Circuito RC Vac.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 24 01:12:05 2013
+
+
+
+** Analysis setup **
+.ac LIN 1000 10 10k
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Circuito RC Vac.net"
+.INC "Circuito RC Vac.als"
+
+
+.probe
+
+
+.END

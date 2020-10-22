@@ -1,0 +1,23 @@
+* C:\Users\Ciro\Dropbox\PSPICE\Projects\Amplificador Bipolar Classe A RespFreq.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 24 01:17:22 2013
+
+
+
+** Analysis setup **
+.ac LIN 10000 20 100k
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Amplificador Bipolar Classe A RespFreq.net"
+.INC "Amplificador Bipolar Classe A RespFreq.als"
+
+
+.probe
+
+
+.END
